@@ -312,7 +312,6 @@ impl<F: PrimeField> R1CSInstance<F> {
       num_inputs: self.num_inputs,
       comm,
     };
-
     let r1cs_decomm = R1CSDecommitment { dense };
 
     (r1cs_comm, r1cs_decomm)

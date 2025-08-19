@@ -519,7 +519,6 @@ impl<F: PrimeField> SparseMatPolynomial<F> {
   ) {
     let batch_size = sparse_polys.len();
     let dense = SparseMatPolynomial::multi_sparse_to_dense_rep(sparse_polys);
-
     let (comm_comb_ops, _blinds_comb_ops) = dense.comb_ops.commit(&gens.gens_ops, None);
     let (comm_comb_mem, _blinds_comb_mem) = dense.comb_mem.commit(&gens.gens_mem, None);
 
